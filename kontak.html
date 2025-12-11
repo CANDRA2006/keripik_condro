@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Kontak Kami - Keripik Singkong Candra</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">🍠 Keripik Singkong Candra</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="kontak.html">Kontak</a></li>
+                    <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="contact-header">
+        <div class="container text-center">
+            <span class="badge hero-badge mb-3">
+                <i class="fas fa-paper-plane"></i> Get In Touch
+            </span>
+            <h1 class="display-4 fw-bold mb-3">
+                <i class="fas fa-envelope-open-text"></i> Hubungi Kami
+            </h1>
+            <p class="lead">Silakan isi formulir di bawah ini atau kunjungi toko kami langsung</p>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <!-- Alert Feedback -->
+        <div id="feedbackAlert" class="alert alert-dismissible fade" role="alert" style="display: none;">
+            <span id="feedbackMessage"></span>
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+
+        <div class="card form-card">
+            <div class="card-body p-4 p-md-5">
+                <div class="text-center mb-4">
+                    <h3 class="fw-bold">Formulir Kontak</h3>
+                    <p class="text-muted">Kami akan merespons pesan Anda dalam 1x24 jam</p>
+                </div>
+
+                <form id="contactForm" novalidate>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="nama" class="form-label">
+                                <i class="fas fa-user text-primary"></i> Nama Lengkap <span class="text-danger">*</span>
+                            </label>
+                            <input type="text" class="form-control form-control-lg" id="nama" placeholder="Masukkan nama lengkap" required>
+                            <div class="invalid-feedback">Nama wajib diisi</div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">
+                                <i class="fas fa-envelope text-danger"></i> Email <span class="text-danger">*</span>
+                            </label>
+                            <input type="email" class="form-control form-control-lg" id="email" placeholder="contoh@email.com" required>
+                            <div class="invalid-feedback">Email tidak valid</div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="nomorhp" class="form-label">
+                                <i class="fas fa-phone text-success"></i> Nomor HP <span class="text-danger">*</span>
+                            </label>
+                            <input type="tel" class="form-control form-control-lg" id="nomorhp" placeholder="08xxxxxxxxxx" pattern="[0-9]+" required>
+                            <small class="text-muted">Format: 08xxxxxxxxxx (hanya angka)</small>
+                            <div class="invalid-feedback">Nomor HP tidak valid</div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="tanggal" class="form-label">
+                                <i class="fas fa-calendar text-warning"></i> Tanggal Pengiriman <span class="text-danger">*</span>
+                            </label>
+                            <input type="date" class="form-control form-control-lg" id="tanggal" required>
+                            <div class="invalid-feedback">Tanggal wajib dipilih</div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="jeniskelamin" class="form-label">
+                                <i class="fas fa-venus-mars text-info"></i> Jenis Kelamin <span class="text-danger">*</span>
+                            </label>
+                            <select class="form-select form-select-lg" id="jeniskelamin" required>
+                                <option value="">-- Pilih --</option>
+                                <option value="lakilaki">Laki-Laki</option>
+                                <option value="perempuan">Perempuan</option>
+                            </select>
+                            <div class="invalid-feedback">Pilih jenis kelamin</div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="kategori" class="form-label">
+                                <i class="fas fa-tag text-secondary"></i> Kategori <span class="text-danger">*</span>
+                            </label>
+                            <select class="form-select form-select-lg" id="kategori" required>
+                                <option value="">-- Pilih --</option>
+                                <option value="umum">Umum</option>
+                                <option value="produk">Produk</option>
+                                <option value="kerjasama">Kerja Sama</option>
+                                <option value="feedback">Feedback</option>
+                            </select>
+                            <div class="invalid-feedback">Pilih kategori</div>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="pesan" class="form-label">
+                                <i class="fas fa-comment-dots text-primary"></i> Pesan <span class="text-danger">*</span>
+                            </label>
+                            <textarea class="form-control" id="pesan" rows="5" placeholder="Tulis pesan Anda..." required></textarea>
+                            <div class="invalid-feedback">Pesan wajib diisi</div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="langganan">
+                                <label class="form-check-label" for="langganan">
+                                    <i class="fas fa-bell text-warning"></i> Saya ingin menerima newsletter dan promo
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 mt-3">
+                        <div class="col-md-6">
+                            <button type="submit" class="btn btn-submit w-100">
+                                <i class="fas fa-paper-plane me-2"></i> Kirim Pesan
+                            </button>
+                        </div>
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-secondary btn-lg w-100" id="clearBtn" style="border-radius: 50px;">
+                                <i class="fas fa-eraser me-2"></i> Clear Data
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION LOKASI KAMI -->
+    <section class="section-spacing bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-subtitle">Kunjungi Kami</span>
+                <h2 class="section-title">📍 Lokasi Toko</h2>
+                <p class="text-muted">Temukan kami di Pekalongan, Jawa Tengah</p>
+            </div>
+            
+            <div class="row g-4 align-items-center">
+                <!-- Kolom Peta -->
+                <div class="col-lg-7">
+                    <div class="card shadow-lg border-0 overflow-hidden" style="border-radius: 20px;">
+                        <div class="card-body p-0">
+                            <!-- Google Maps Embed -->
+                            <iframe 
+                                src="https://maps.google.com/maps?hl=id&q=-6.953043,109.551683&t=m&z=18&output=embed"
+                                width="100%" 
+                                height="450" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Kolom Informasi -->
+                <div class="col-lg-5">
+                    <div class="card shadow-lg border-0 h-100" style="border-radius: 20px; overflow: hidden;">
+                        <div class="card-header text-white text-center py-3" style="background: var(--gradient-primary);">
+                            <h4 class="mb-0 fw-bold">
+                                <i class="fas fa-map-marker-alt me-2"></i>
+                                Alamat Lengkap
+                            </h4>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="location-info mb-4">
+                                <h5 class="fw-bold mb-3" style="color: var(--primary-color);">
+                                    🍠 Keripik Singkong Candra
+                                </h5>
+                                <div class="d-flex align-items-start mb-3">
+                                    <i class="fas fa-map-marker-alt me-3 mt-1" style="color: var(--secondary-color); font-size: 1.2rem;"></i>
+                                    <div>
+                                        <p class="mb-1"><strong>Jl. Raya Bulakpelem No. 3</strong></p>
+                                        <p class="mb-1">Dukuh Gombong, Kelurahan Sragi</p>
+                                        <p class="mb-0">Pekalongan, Jawa Tengah 51155</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-phone me-3" style="color: var(--secondary-color); font-size: 1.2rem;"></i>
+                                    <div>
+                                        <p class="mb-0"><strong>+62 896-4486-9711</strong></p>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-clock me-3" style="color: var(--secondary-color); font-size: 1.2rem;"></i>
+                                    <div>
+                                        <p class="mb-1"><strong>Jam Operasional:</strong></p>
+                                        <p class="mb-0 small">Senin - Jumat: 08.00 - 17.00</p>
+                                        <p class="mb-0 small">Sabtu: 08.00 - 15.00</p>
+                                        <p class="mb-0 small text-danger">Minggu: Tutup</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="d-grid gap-2">
+                                <!-- Tombol Buka di Google Maps -->
+                                <a href="https://www.google.com/maps/search/?api=1&query=-6.953044,109.551689" 
+                                   target="_blank" 
+                                   class="btn btn-primary btn-lg">
+                                    <i class="fas fa-map-marked-alt me-2"></i>Buka di Google Maps
+                                </a>
+                                
+                                <!-- Tombol Dapatkan Petunjuk Arah -->
+                                <a href="https://www.google.com/maps/dir/?api=1&destination=-6.953044,109.551689" 
+                                   target="_blank" 
+                                   class="btn btn-success btn-lg">
+                                    <i class="fas fa-directions me-2"></i>Petunjuk Arah
+                                </a>
+                                
+                                <!-- Tombol Share Lokasi -->
+                                <button onclick="shareLokasi()" class="btn btn-info btn-lg text-white">
+                                    <i class="fas fa-share-alt me-2"></i>Bagikan Lokasi
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Info Cards -->
+            <div class="row g-4 mt-4">
+                <div class="col-md-4">
+                    <div class="card text-center h-100 border-0 shadow-sm" style="border-radius: 15px;">
+                        <div class="card-body p-4">
+                            <div class="mb-3">
+                                <i class="fas fa-car fa-3x" style="color: var(--primary-color);"></i>
+                            </div>
+                            <h5 class="fw-bold">Akses Mudah</h5>
+                            <p class="text-muted mb-0">Lokasi strategis dengan akses jalan raya yang mudah dijangkau</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center h-100 border-0 shadow-sm" style="border-radius: 15px;">
+                        <div class="card-body p-4">
+                            <div class="mb-3">
+                                <i class="fas fa-parking fa-3x" style="color: var(--primary-color);"></i>
+                            </div>
+                            <h5 class="fw-bold">Area Parkir</h5>
+                            <p class="text-muted mb-0">Tersedia area parkir yang luas dan aman untuk kendaraan Anda</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center h-100 border-0 shadow-sm" style="border-radius: 15px;">
+                        <div class="card-body p-4">
+                            <div class="mb-3">
+                                <i class="fas fa-store fa-3x" style="color: var(--primary-color);"></i>
+                            </div>
+                            <h5 class="fw-bold">Toko Nyaman</h5>
+                            <p class="text-muted mb-0">Suasana toko yang bersih dan nyaman untuk berbelanja</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KOMPONEN BOOTSTRAP: MODAL -->
+    <div class="modal fade" id="successModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="border-radius: 20px; border: none; overflow: hidden;">
+                <div class="modal-header text-white" style="background: var(--gradient-primary); border: none;">
+                    <h5 class="modal-title fw-bold">
+                        <i class="fas fa-check-circle me-2"></i> Pesan Berhasil Dikirim!
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center py-5">
+                    <div class="success-icon mb-4">
+                        <i class="fas fa-check-circle" style="font-size: 5rem; color: #4caf50;"></i>
+                    </div>
+                    <h4 class="mb-3">Terima Kasih <strong id="modalNama"></strong>!</h4>
+                    <p class="text-muted mb-0">Pesan Anda telah kami terima. Tim kami akan segera menghubungi Anda melalui email atau WhatsApp.</p>
+                </div>
+                <div class="modal-footer justify-content-center border-0">
+                    <button type="button" class="btn btn-success btn-lg px-5" data-bs-dismiss="modal" style="border-radius: 50px;">
+                        <i class="fas fa-times-circle me-2"></i> Tutup
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-modern text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Keripik Singkong Candra. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script type="module" src="js/form.js"></script>
+    <script type="module" src="js/newsletter.js"></script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Galeri - Keripik Singkong Candra</title>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">🍠 Keripik Singkong Candra</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
+          <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+          <li class="nav-item"><a class="nav-link active" href="galeri.html">Galeri</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Hero Header -->
+  <section class="gallery-hero">
+    <div class="container text-center position-relative">
+      <span class="hero-badge mb-3">
+        <i class="fas fa-images"></i> Our Gallery
+      </span>
+      <h1 class="display-4 fw-bold mb-3">Galeri Produk Kami</h1>
+      <p class="lead">Jelajahi koleksi keripik singkong premium kami</p>
+      <span class="badge-custom mt-2">6 Produk Unggulan</span>
+    </div>
+  </section>
+
+  <div class="container my-5">
+    <!-- Gallery Grid -->
+    <div class="row g-4" id="galleryGrid">
+      <!-- Original -->
+      <div class="col-md-6 col-lg-4">
+        <div class="gallery-card" data-product="original">
+          <span class="product-badge bg-success">Original</span>
+          <div class="image-wrapper">
+            <img src="Assets/Original.jpg" alt="Keripik Singkong Original">
+            <div class="image-overlay">
+              <i class="fas fa-search-plus"></i>
+              <p class="fw-bold">Klik untuk detail</p>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="fw-bold mb-3">Keripik Singkong Original</h5>
+            <div class="product-price">
+              <span class="price-amount">Rp 15.000</span>
+              <span class="price-unit">per bungkus</span>
+            </div>
+            <div class="product-description">
+              <p class="text-muted mb-3">
+                <i class="fas fa-star text-warning me-2"></i>
+                Rasa gurih alami dengan kerenyahan maksimal. Cocok untuk semua suasana dan menjadi favorit keluarga Indonesia.
+              </p>
+              <div class="text-center">
+                <span class="feature-badge">
+                  <i class="fas fa-check-circle me-1"></i>100% Alami
+                </span>
+                <span class="feature-badge">
+                  <i class="fas fa-fire me-1"></i>Renyah
+                </span>
+                <span class="feature-badge">
+                  <i class="fas fa-heart me-1"></i>Best Seller
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Balado -->
+      <div class="col-md-6 col-lg-4">
+        <div class="gallery-card" data-product="balado">
+          <span class="product-badge bg-danger">Hot!</span>
+          <div class="image-wrapper">
+            <img src="Assets/Balado.jpg" alt="Keripik Singkong Balado">
+            <div class="image-overlay">
+              <i class="fas fa-search-plus"></i>
+              <p class="fw-bold">Klik untuk detail</p>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="fw-bold mb-3">Keripik Singkong Balado</h5>
+            <div class="product-price">
+              <span class="price-amount">Rp 16.000</span>
+              <span class="price-unit">per bungkus</span>
+            </div>
+            <div class="product-description">
+              <p class="text-muted mb-3">
+                <i class="fas fa-star text-warning me-2"></i>
+                Sensasi pedas menggoda yang bikin ketagihan. Cocok untuk para pecinta cabai dan kuliner pedas!
+              </p>
+              <div class="text-center">
+                <span class="feature-badge">
+                  <i class="fas fa-pepper-hot me-1"></i>Pedas
+                </span>
+                <span class="feature-badge">
+                  <i class="fas fa-fire me-1"></i>Renyah
+                </span>
+                <span class="feature-badge">
+                  <i class="fas fa-thumbs-up me-1"></i>Favorite
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bawang -->
+      <div class="col-md-6 col-lg-4">
+        <div class="gallery-card" data-product="bawang">
+          <span class="product-badge bg-warning text-dark">Best Seller</span>
+          <div class="image-wrapper">
+            <img src="Assets/Bawang.jpg" alt="Keripik Singkong Bawang">
+            <div class="image-overlay">
+              <i class="fas fa-search-plus"></i>
+              <p class="fw-bold">Klik untuk detail</p>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="fw-bold mb-3">Keripik Singkong Bawang</h5>
+            <div class="product-price">
+              <span class="price-amount">Rp 17.000</span>
+              <span class="price-unit">per bungkus</span>
+            </div>
+            <div class="product-description">
+              <p class="text-muted mb-3">
+                <i class="fas fa-star text-warning me-2"></i>
+                Aroma bawang yang harum dan rasa yang gurih membuat keripik ini sulit dilupakan. Sempurna untuk camilan santai!
+              </p>
+              <div class="text-center">
+                <span class="feature-badge">
+                  <i class="fas fa-seedling me-1"></i>Premium
+                </span>
+                <span class="feature-badge">
+                  <i class="fas fa-fire me-1"></i>Renyah
+                </span>
+                <span class="feature-badge">
+                  <i class="fas fa-crown me-1"></i>Populer
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Keju -->
+      <div class="col-md-6 col-lg-4">
+        <div class="gallery-card" data-product="keju">
+          <span class="product-badge bg-info">Premium</span>
+          <div class="image-wrapper">
+            <img src="Assets/Keju.jpg" alt="Keripik Singkong Keju">
+            <div class="image-overlay">
+              <i class="fas fa-search-plus"></i>
+              <p class="fw-bold">Klik untuk detail</p>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="fw-bold mb-3">Keripik Singkong Keju</h5>
+            <div class="product-price">
+              <span class="price-amount">Rp 18.000</span>
+              <span class="price-unit">per bungkus</span>
+            </div>
+            <div class="product-description">
+              <p class="text-muted mb-3">
+                <i class="fas fa-star text-warning me-2"></i>
+                Inovasi terbaru dengan taburan keju premium yang creamy dan lezat. Perpaduan sempurna gurih dan keju!
+              </p>
+              <div class="text-center">
+                <span class="feature-badge">
+                  <i class="fas fa-cheese me-1"></i>Keju Premium
+                </span>
+                <span class="feature-badge">
+                  <i class="fas fa-fire me-1"></i>Renyah
+                </span>
+                <span class="feature-badge">
+                  <i class="fas fa-award me-1"></i>Exclusive
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jagung -->
+      <div class="col-md-6 col-lg-4">
+        <div class="gallery-card" data-product="jagung">
+          <span class="product-badge bg-primary">New!</span>
+          <div class="image-wrapper">
+            <img src="Assets/Jagung.jpg" alt="Keripik Singkong Jagung">
+            <div class="image-overlay">
+              <i class="fas fa-search-plus"></i>
+              <p class="fw-bold">Klik untuk detail</p>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="fw-bold mb-3">Keripik Singkong Jagung</h5>
+            <div class="product-price">
+              <span class="price-amount">Rp 18.000</span>
+              <span class="price-unit">per bungkus</span>
+            </div>
+            <div class="product-description">
+              <p class="text-muted mb-3">
+                <i class="fas fa-star text-warning me-2"></i>
+                Rasa jagung yang gurih dan manis alami membekas di lidah. Inovasi terbaru yang wajib dicoba!
+              </p>
+              <div class="text-center">
+                <span class="feature-badge">
+                  <i class="fas fa-corn me-1"></i>Jagung Manis
+                </span>
+                <span class="feature-badge">
+                  <i class="fas fa-fire me-1"></i>Renyah
+                </span>
+                <span class="feature-badge">
+                  <i class="fas fa-sparkles me-1"></i>Inovasi
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proses -->
+      <div class="col-md-6 col-lg-4">
+        <div class="gallery-card" data-product="proses">
+          <span class="product-badge bg-secondary">Behind the Scenes</span>
+          <div class="image-wrapper">
+            <img src="Assets/Proses_Panen.jpg" alt="Proses Panen Singkong">
+            <div class="image-overlay">
+              <i class="fas fa-search-plus"></i>
+              <p class="fw-bold">Klik untuk detail</p>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="fw-bold mb-3">Proses Panen Singkong</h5>
+            <div class="product-price">
+              <span class="price-amount" style="font-size: 1.5rem;">Dokumentasi</span>
+              <span class="price-unit">Proses Produksi</span>
+            </div>
+            <div class="product-description">
+              <p class="text-muted mb-3">
+                <i class="fas fa-star text-warning me-2"></i>
+                Proses pemanenan singkong melibatkan petani lokal. Kami berkomitmen menjaga kualitas dari sumber hingga konsumen.
+              </p>
+              <div class="text-center">
+                <span class="feature-badge">
+                  <i class="fas fa-users me-1"></i>Petani Lokal
+                </span>
+                <span class="feature-badge">
+                  <i class="fas fa-leaf me-1"></i>Organik
+                </span>
+                <span class="feature-badge">
+                  <i class="fas fa-handshake me-1"></i>Kemitraan
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Control Buttons -->
+    <div class="control-buttons text-center mt-5">
+      <button class="btn btn-primary-custom btn-custom" id="showAllBtn">
+        <i class="fas fa-eye me-2"></i> Tampilkan Semua Detail
+      </button>
+      <button class="btn btn-secondary-custom btn-custom" id="hideAllBtn">
+        <i class="fas fa-eye-slash me-2"></i> Sembunyikan Semua
+      </button>
+    </div>
+  </div>
+
+  <footer class="text-center footer-modern">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Keripik Singkong Candra. Semua Hak Dilindungi.</p>
+    </div>
+  </footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="src/galeri.js"></script>
+</body>
+</html>
