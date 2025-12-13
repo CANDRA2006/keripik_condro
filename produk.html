@@ -8,78 +8,82 @@
     <link rel="stylesheet" href="style.css">
     <title>Produk - Keripik Singkong Candra</title>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+<body class="bg-light" style="font-family: 'Poppins', sans-serif; color: #2c2416;">
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top shadow">
         <div class="container">
-            <a class="navbar-brand" href="index.html">🍠 Keripik Singkong Candra</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a class="navbar-brand fs-4 fw-bold text-white" href="index.html" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
+                🍠 Keripik Singkong Candra
+            </a>
+            <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="produk.html">Produk</a></li>
-                    <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
-                    <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-medium px-3 rounded" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-medium px-3 rounded" href="tentang.html">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link active text-white fw-medium px-3 rounded" href="produk.html">Produk</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-medium px-3 rounded" href="kontak.html">Kontak</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-medium px-3 rounded" href="galeri.html">Galeri</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="product-hero">
-        <div class="container text-center">
-            <span class="hero-badge mb-3">
+    <section class="product-hero text-white text-center py-5 position-relative overflow-hidden">
+        <div class="container position-relative" style="z-index: 2;">
+            <span class="badge bg-white bg-opacity-25 mb-3 px-3 py-2 rounded-pill border border-white border-opacity-25" style="backdrop-filter: blur(10px);">
                 <i class="fas fa-shopping-bag"></i> Premium Products
             </span>
             <h1 class="display-4 fw-bold mb-3">Produk Kami</h1>
-            <p class="lead">Beragam varian rasa keripik singkong premium untuk Anda</p>
+            <p class="lead mb-0">Beragam varian rasa keripik singkong premium untuk Anda</p>
         </div>
     </section>
 
     <div class="container my-5">
         <!-- Age Checker -->
-        <div class="card age-card mb-5 shadow-lg">
+        <div class="card age-card border-0 shadow-lg rounded-4 mb-5">
             <div class="card-body p-4">
-                <h3 class="card-title text-center mb-3">
-                    <i class="fas fa-user-check"></i> Cek Kategori Usia Anda
+                <h3 class="text-center mb-3 fw-bold">
+                    <i class="fas fa-user-check me-2"></i>Cek Kategori Usia Anda
                 </h3>
-                <p class="text-center text-muted">Masukkan usia Anda untuk mengetahui kategori pelanggan!</p>
+                <p class="text-center text-muted mb-4">Masukkan usia Anda untuk mengetahui kategori pelanggan!</p>
                 
                 <div class="row justify-content-center">
                     <div class="col-md-6">
                         <div class="input-group input-group-lg">
                             <input type="number" class="form-control" id="ageInput" placeholder="Masukkan usia" min="1" max="120">
-                            <button class="btn btn-primary" id="checkAgeBtn" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border: none;">
-                                <i class="fas fa-check-circle"></i> Cek
+                            <button class="btn btn-submit text-white fw-semibold" id="checkAgeBtn">
+                                <i class="fas fa-check-circle me-2"></i>Cek
                             </button>
                         </div>
-                        <div id="ageResult" class="age-result"></div>
+                        <div id="ageResult" class="age-result mt-3"></div>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Testimoni Section -->
-        <h2 class="section-title text-center mb-5">
-            <span class="section-subtitle d-block mb-2">Kata Mereka</span>
-            💬 Testimoni Pelanggan
-        </h2>
+        <div class="text-center mb-5">
+            <span class="badge text-uppercase fw-semibold mb-2" style="color: #ff8c42; background: transparent; letter-spacing: 2px;">Kata Mereka</span>
+            <h2 class="display-5 fw-bold" style="color: #d4691a;">💬 Testimoni Pelanggan</h2>
+        </div>
         <div class="row g-4 mb-5" id="testimonialContainer"></div>
 
         <!-- Calculator Section -->
-        <h2 class="section-title text-center mb-5">
-            <span class="section-subtitle d-block mb-2">Hitung Total Belanja</span>
-            🛒 Kalkulator Belanja
-        </h2>
-        <div class="card calculator-card mb-5 shadow-lg">
+        <div class="text-center mb-5">
+            <span class="badge text-uppercase fw-semibold mb-2" style="color: #ff8c42; background: transparent; letter-spacing: 2px;">Hitung Total Belanja</span>
+            <h2 class="display-5 fw-bold" style="color: #d4691a;">🛒 Kalkulator Belanja</h2>
+        </div>
+        <div class="card calculator-card border-0 shadow-lg rounded-4 mb-5">
             <div class="card-body p-4">
                 <form id="calculatorForm">
                     <div class="row g-3">
                         <div class="col-md-6">
                             <label class="form-label fw-bold">
-                                <i class="fas fa-shopping-bag text-primary"></i> Pilih Produk
+                                <i class="fas fa-shopping-bag text-primary me-2"></i>Pilih Produk
                             </label>
                             <select class="form-select form-select-lg" id="productSelect" required>
                                 <option value="">-- Pilih Produk --</option>
@@ -93,38 +97,39 @@
                         
                         <div class="col-md-6">
                             <label class="form-label fw-bold">
-                                <i class="fas fa-shopping-cart text-success"></i> Jumlah Bungkus
+                                <i class="fas fa-shopping-cart text-success me-2"></i>Jumlah Bungkus
                             </label>
                             <input type="number" class="form-control form-control-lg" id="quantityInput" min="1" value="1" required>
                         </div>
                     </div>
                 </form>
                 
-                <div id="priceResult" class="price-result"></div>
+                <div id="priceResult" class="price-result text-white rounded-4 p-4 mt-4" style="display: none;"></div>
             </div>
         </div>
         
         <!-- Product Cards -->
-        <h2 class="section-title text-center mb-5">
-            <span class="section-subtitle d-block mb-2">Pilihan Terbaik</span>
-            🍠 Katalog Produk Kami
-        </h2>
+        <div class="text-center mb-5">
+            <span class="badge text-uppercase fw-semibold mb-2" style="color: #ff8c42; background: transparent; letter-spacing: 2px;">Pilihan Terbaik</span>
+            <h2 class="display-5 fw-bold" style="color: #d4691a;">🍠 Katalog Produk Kami</h2>
+        </div>
         <div class="row justify-content-center g-4 mb-5">
+            
             <!-- Original -->
             <div class="col-md-6 col-lg-4">
-                <div class="card product-card h-100 shadow-lg">
-                    <div class="card-img-wrapper">
-                        <img src="Assets/Original.jpg" class="card-img-top" alt="Keripik Singkong Original">
-                        <span class="badge badge-new">🥄 Original!</span>
+                <div class="card product-card border-0 shadow-lg rounded-4 h-100 overflow-hidden">
+                    <div class="card-img-wrapper position-relative overflow-hidden" style="height: 250px;">
+                        <img src="Assets/Original.jpg" class="w-100 h-100" style="object-fit: cover;">
+                        <span class="badge badge-new position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill shadow text-white">🥄 Original!</span>
                     </div>
-                    <div class="card-body d-flex flex-column">
+                    <div class="card-body d-flex flex-column p-4">
                         <h5 class="fw-bold mb-3">Keripik Singkong Original</h5>
                         <p class="flex-grow-1 text-muted">Varian original yang menjadi favorit pelanggan. Dibuat dari singkong pilihan yang dipotong tipis dan digoreng dengan minyak berkualitas.</p>
-                        <div class="price-tag mb-3">
-                            <i class="fas fa-tag"></i>
-                            <span>Rp 15.000</span>
+                        <div class="price-tag text-white text-center rounded-3 p-3 mb-3 shadow">
+                            <i class="fas fa-tag me-2"></i>
+                            <span class="fs-5 fw-bold">Rp 15.000</span>
                         </div>
-                        <button class="btn btn-whatsapp w-100" onclick="pesanWhatsApp('Keripik Singkong Original', 15000)">
+                        <button class="btn btn-whatsapp text-white fw-semibold rounded-pill w-100" onclick="pesanWhatsApp('Keripik Singkong Original', 15000)">
                             <i class="fab fa-whatsapp me-2"></i>Pesan via WhatsApp
                         </button>
                     </div>
@@ -133,19 +138,19 @@
 
             <!-- Balado -->
             <div class="col-md-6 col-lg-4">
-                <div class="card product-card h-100 shadow-lg">
-                    <div class="card-img-wrapper">
-                        <img src="Assets/Balado.jpg" class="card-img-top" alt="Keripik Singkong Balado">
-                        <span class="badge badge-new">🔥 HOT!</span>
+                <div class="card product-card border-0 shadow-lg rounded-4 h-100 overflow-hidden">
+                    <div class="card-img-wrapper position-relative overflow-hidden" style="height: 250px;">
+                        <img src="Assets/Balado.jpg" class="w-100 h-100" style="object-fit: cover;">
+                        <span class="badge badge-new position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill shadow text-white">🔥 HOT!</span>
                     </div>
-                    <div class="card-body d-flex flex-column">
+                    <div class="card-body d-flex flex-column p-4">
                         <h5 class="fw-bold mb-3">Keripik Singkong Balado</h5>
                         <p class="flex-grow-1 text-muted">Sensasi pedas balado khas Sumatera dengan cabai merah, bawang, dan rempah pilihan yang bikin ketagihan.</p>
-                        <div class="price-tag mb-3">
-                            <i class="fas fa-tag"></i>
-                            <span>Rp 16.000</span>
+                        <div class="price-tag text-white text-center rounded-3 p-3 mb-3 shadow">
+                            <i class="fas fa-tag me-2"></i>
+                            <span class="fs-5 fw-bold">Rp 16.000</span>
                         </div>
-                        <button class="btn btn-whatsapp w-100" onclick="pesanWhatsApp('Keripik Singkong Balado', 16000)">
+                        <button class="btn btn-whatsapp text-white fw-semibold rounded-pill w-100" onclick="pesanWhatsApp('Keripik Singkong Balado', 16000)">
                             <i class="fab fa-whatsapp me-2"></i>Pesan via WhatsApp
                         </button>
                     </div>
@@ -154,19 +159,19 @@
 
             <!-- Keju -->
             <div class="col-md-6 col-lg-4">
-                <div class="card product-card h-100 shadow-lg">
-                    <div class="card-img-wrapper">
-                        <img src="Assets/Keju.jpg" class="card-img-top" alt="Keripik Singkong Keju">
-                        <span class="badge badge-new">⭐ PREMIUM</span>
+                <div class="card product-card border-0 shadow-lg rounded-4 h-100 overflow-hidden">
+                    <div class="card-img-wrapper position-relative overflow-hidden" style="height: 250px;">
+                        <img src="Assets/Keju.jpg" class="w-100 h-100" style="object-fit: cover;">
+                        <span class="badge badge-new position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill shadow text-white">⭐ PREMIUM</span>
                     </div>
-                    <div class="card-body d-flex flex-column">
+                    <div class="card-body d-flex flex-column p-4">
                         <h5 class="fw-bold mb-3">Keripik Singkong Keju</h5>
                         <p class="flex-grow-1 text-muted">Kelezatan keripik singkong dipadukan dengan keju premium yang creamy dan gurih memanjakan lidah Anda.</p>
-                        <div class="price-tag mb-3">
-                            <i class="fas fa-tag"></i>
-                            <span>Rp 18.000</span>
+                        <div class="price-tag text-white text-center rounded-3 p-3 mb-3 shadow">
+                            <i class="fas fa-tag me-2"></i>
+                            <span class="fs-5 fw-bold">Rp 18.000</span>
                         </div>
-                        <button class="btn btn-whatsapp w-100" onclick="pesanWhatsApp('Keripik Singkong Keju', 18000)">
+                        <button class="btn btn-whatsapp text-white fw-semibold rounded-pill w-100" onclick="pesanWhatsApp('Keripik Singkong Keju', 18000)">
                             <i class="fab fa-whatsapp me-2"></i>Pesan via WhatsApp
                         </button>
                     </div>
@@ -175,19 +180,19 @@
 
             <!-- Bawang -->
             <div class="col-md-6 col-lg-4">
-                <div class="card product-card h-100 shadow-lg">
-                    <div class="card-img-wrapper">
-                        <img src="Assets/Bawang.jpg" class="card-img-top" alt="Keripik Singkong Bawang">
-                        <span class="badge badge-new">💓 Best Seller!</span>
+                <div class="card product-card border-0 shadow-lg rounded-4 h-100 overflow-hidden">
+                    <div class="card-img-wrapper position-relative overflow-hidden" style="height: 250px;">
+                        <img src="Assets/Bawang.jpg" class="w-100 h-100" style="object-fit: cover;">
+                        <span class="badge badge-new position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill shadow text-white">💓 Best Seller!</span>
                     </div>
-                    <div class="card-body d-flex flex-column">
+                    <div class="card-body d-flex flex-column p-4">
                         <h5 class="fw-bold mb-3">Keripik Singkong Bawang</h5>
                         <p class="flex-grow-1 text-muted">Kelezatan keripik dengan aroma bawang yang harum khas nusantara yang dijamin bikin ketagihan.</p>
-                        <div class="price-tag mb-3">
-                            <i class="fas fa-tag"></i>
-                            <span>Rp 17.000</span>
+                        <div class="price-tag text-white text-center rounded-3 p-3 mb-3 shadow">
+                            <i class="fas fa-tag me-2"></i>
+                            <span class="fs-5 fw-bold">Rp 17.000</span>
                         </div>
-                        <button class="btn btn-whatsapp w-100" onclick="pesanWhatsApp('Keripik Singkong Bawang', 17000)">
+                        <button class="btn btn-whatsapp text-white fw-semibold rounded-pill w-100" onclick="pesanWhatsApp('Keripik Singkong Bawang', 17000)">
                             <i class="fab fa-whatsapp me-2"></i>Pesan via WhatsApp
                         </button>
                     </div>
@@ -196,19 +201,19 @@
 
             <!-- Jagung -->
             <div class="col-md-6 col-lg-4">
-                <div class="card product-card h-100 shadow-lg">
-                    <div class="card-img-wrapper">
-                        <img src="Assets/Jagung.jpg" class="card-img-top" alt="Keripik Singkong Jagung">
-                        <span class="badge badge-new">✨ NEW!</span>
+                <div class="card product-card border-0 shadow-lg rounded-4 h-100 overflow-hidden">
+                    <div class="card-img-wrapper position-relative overflow-hidden" style="height: 250px;">
+                        <img src="Assets/Jagung.jpg" class="w-100 h-100" style="object-fit: cover;">
+                        <span class="badge badge-new position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill shadow text-white">✨ NEW!</span>
                     </div>
-                    <div class="card-body d-flex flex-column">
+                    <div class="card-body d-flex flex-column p-4">
                         <h5 class="fw-bold mb-3">Keripik Singkong Jagung Manis</h5>
                         <p class="flex-grow-1 text-muted">Perpaduan rasa manis jagung dengan gurihnya singkong, cocok untuk semua kalangan dan segala suasana.</p>
-                        <div class="price-tag mb-3">
-                            <i class="fas fa-tag"></i>
-                            <span>Rp 18.000</span>
+                        <div class="price-tag text-white text-center rounded-3 p-3 mb-3 shadow">
+                            <i class="fas fa-tag me-2"></i>
+                            <span class="fs-5 fw-bold">Rp 18.000</span>
                         </div>
-                        <button class="btn btn-whatsapp w-100" onclick="pesanWhatsApp('Keripik Singkong Jagung', 18000)">
+                        <button class="btn btn-whatsapp text-white fw-semibold rounded-pill w-100" onclick="pesanWhatsApp('Keripik Singkong Jagung', 18000)">
                             <i class="fab fa-whatsapp me-2"></i>Pesan via WhatsApp
                         </button>
                     </div>
@@ -217,63 +222,63 @@
         </div>
 
         <!-- Product Table -->
-        <h2 class="section-title text-center mb-5">
-            <span class="section-subtitle d-block mb-2">Informasi Produk</span>
-            📋 Status Ketersediaan
-        </h2>
+        <div class="text-center mb-5">
+            <span class="badge text-uppercase fw-semibold mb-2" style="color: #ff8c42; background: transparent; letter-spacing: 2px;">Informasi Produk</span>
+            <h2 class="display-5 fw-bold" style="color: #d4691a;">📋 Status Ketersediaan</h2>
+        </div>
         <div class="table-responsive mb-5">
-            <table class="table table-custom shadow-lg">
-                <thead>
+            <table class="table table-custom border-0 shadow-lg rounded-4 overflow-hidden">
+                <thead class="text-white">
                     <tr>
-                        <th>No</th>
-                        <th>Nama Produk</th>
-                        <th>Deskripsi</th>
-                        <th>Harga</th>
-                        <th>Status</th>
+                        <th class="py-3 px-4">No</th>
+                        <th class="py-3 px-4">Nama Produk</th>
+                        <th class="py-3 px-4">Deskripsi</th>
+                        <th class="py-3 px-4">Harga</th>
+                        <th class="py-3 px-4">Status</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="bg-white">
                     <tr>
-                        <td><strong>1</strong></td>
-                        <td><strong>Keripik Singkong Original</strong></td>
-                        <td>Rasa gurih alami dengan kerenyahan maksimal</td>
-                        <td><strong>Rp 15.000</strong></td>
-                        <td><span class="badge bg-success">Tersedia</span></td>
+                        <td class="py-3 px-4"><strong>1</strong></td>
+                        <td class="py-3 px-4"><strong>Keripik Singkong Original</strong></td>
+                        <td class="py-3 px-4">Rasa gurih alami dengan kerenyahan maksimal</td>
+                        <td class="py-3 px-4"><strong>Rp 15.000</strong></td>
+                        <td class="py-3 px-4"><span class="badge bg-success rounded-pill px-3">Tersedia</span></td>
                     </tr>
                     <tr>
-                        <td><strong>2</strong></td>
-                        <td><strong>Keripik Singkong Balado</strong></td>
-                        <td>Perpaduan sempurna antara manis dan pedas</td>
-                        <td><strong>Rp 16.000</strong></td>
-                        <td><span class="badge bg-success">Tersedia</span></td>
+                        <td class="py-3 px-4"><strong>2</strong></td>
+                        <td class="py-3 px-4"><strong>Keripik Singkong Balado</strong></td>
+                        <td class="py-3 px-4">Perpaduan sempurna antara manis dan pedas</td>
+                        <td class="py-3 px-4"><strong>Rp 16.000</strong></td>
+                        <td class="py-3 px-4"><span class="badge bg-success rounded-pill px-3">Tersedia</span></td>
                     </tr>
                     <tr>
-                        <td><strong>3</strong></td>
-                        <td><strong>Keripik Singkong Bawang</strong></td>
-                        <td>Aroma bawang yang harum dan menggugah selera</td>
-                        <td><strong>Rp 17.000</strong></td>
-                        <td><span class="badge bg-success">Tersedia</span></td>
+                        <td class="py-3 px-4"><strong>3</strong></td>
+                        <td class="py-3 px-4"><strong>Keripik Singkong Bawang</strong></td>
+                        <td class="py-3 px-4">Aroma bawang yang harum dan menggugah selera</td>
+                        <td class="py-3 px-4"><strong>Rp 17.000</strong></td>
+                        <td class="py-3 px-4"><span class="badge bg-success rounded-pill px-3">Tersedia</span></td>
                     </tr>
                     <tr>
-                        <td><strong>4</strong></td>
-                        <td><strong>Keripik Singkong Keju</strong></td>
-                        <td>Inovasi terbaru dengan taburan keju premium</td>
-                        <td><strong>Rp 18.000</strong></td>
-                        <td><span class="badge bg-success">Tersedia</span></td>
+                        <td class="py-3 px-4"><strong>4</strong></td>
+                        <td class="py-3 px-4"><strong>Keripik Singkong Keju</strong></td>
+                        <td class="py-3 px-4">Inovasi terbaru dengan taburan keju premium</td>
+                        <td class="py-3 px-4"><strong>Rp 18.000</strong></td>
+                        <td class="py-3 px-4"><span class="badge bg-success rounded-pill px-3">Tersedia</span></td>
                     </tr>
                     <tr>
-                        <td><strong>5</strong></td>
-                        <td><strong>Keripik Singkong Jagung</strong></td>
-                        <td>Rasa jagung yang gurih dan membekas</td>
-                        <td><strong>Rp 18.000</strong></td>
-                        <td><span class="badge bg-success">Tersedia</span></td>
+                        <td class="py-3 px-4"><strong>5</strong></td>
+                        <td class="py-3 px-4"><strong>Keripik Singkong Jagung</strong></td>
+                        <td class="py-3 px-4">Rasa jagung yang gurih dan membekas</td>
+                        <td class="py-3 px-4"><strong>Rp 18.000</strong></td>
+                        <td class="py-3 px-4"><span class="badge bg-success rounded-pill px-3">Tersedia</span></td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
 
-    <footer class="footer-modern text-center">
+    <footer class="footer-modern text-center py-4 text-white">
         <div class="container">
             <p class="mb-0">&copy; 2025 Keripik Singkong Candra. Semua hak cipta dilindungi.</p>
         </div>
