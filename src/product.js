@@ -140,6 +140,7 @@ function calculatePrice() {
   resultDiv.style.animation = 'fadeIn 0.5s ease';
 }
 
+// WA Message
 function pesanWhatsAppCalculator(namaProduk, harga, qty, total) {
   const nomorWA = '6289644869711';
   const hargaFormat = 'Rp ' + harga.toLocaleString('id-ID');
@@ -214,6 +215,7 @@ document.addEventListener('DOMContentLoaded', function() {
       this.style.transform = 'scale(1)';
     });
   });
+  
   
   // Animate cards on scroll
   const observeCards = new IntersectionObserver((entries) => {

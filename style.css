@@ -4,8 +4,6 @@
     --gradient-primary: linear-gradient(135deg, #d4691a 0%, #ff8c42 50%, #ffa726 100%);
 }
 
-/* ============ CUSTOM STYLES ONLY ============ */
-
 /* Navbar Custom Background */
 .navbar-custom {
     background: var(--gradient-primary);
@@ -304,7 +302,7 @@
 .timeline-dot { animation: pulse-timeline 2s ease infinite; }
 .image-overlay i { animation: pulse 2s infinite; }
 
-/* ============ TRANSITIONS (Bootstrap Override) ============ */
+/* ============ TRANSITIONS  ============ */
 .nav-link, .navbar-brand, .btn, .card, .feature-card, .contact-card-modern,
 .about-card, .gallery-card, .product-card, .testimonial-card, .timeline-content,
 .feature-icon, .contact-icon, .value-icon-wrapper, .image-wrapper img {

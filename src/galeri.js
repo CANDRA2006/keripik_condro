@@ -1,18 +1,11 @@
-// ============================================
-// GALERI.JS - FIXED & ENHANCED VERSION
-// ============================================
-
-// FITUR ES6 #1: CONST - untuk variabel yang tidak berubah
 const galleryCards = document.querySelectorAll('.gallery-card');
-
-// FITUR ES6 #2: LET - untuk variabel yang bisa berubah
 let totalKlik = 0;
 
 // ============================================
 // FUNGSI UTAMA
 // ============================================
 
-// FITUR ES6 #3: ARROW FUNCTION (=>) - cara baru menulis fungsi
+//ARROW FUNCTION (=>)
 const tampilkanDeskripsi = (card) => {
   const description = card.querySelector('.product-description');
   
@@ -47,10 +40,10 @@ const resetCard = (card) => {
 // PASANG EVENT KE SEMUA CARD
 // ============================================
 
-// FITUR ES6 #4: FOR...OF LOOP - cara mudah looping array
+// FITUR ES6
 for (const card of galleryCards) {
   
-  // Sembunyikan deskripsi dulu
+  // Sembunyikan deskripsi
   const description = card.querySelector('.product-description');
   description.classList.remove('show');
   
@@ -101,7 +94,7 @@ function sembunyikanSemua() {
 
 // Lihat produk yang sedang ditampilkan
 function lihatProdukAktif() {
-  // FITUR ES6 #5: TEMPLATE LITERAL (`${}`) - string dengan variabel
+  // FITUR ES6 #5: TEMPLATE LITERAL (`${}`)
   console.log(`=== PRODUK YANG DITAMPILKAN ===`);
   
   let ada = false;
