@@ -1,7 +1,7 @@
 {
   "name": "keripik_condro",
   "version": "1.0.0",
-  "description": ""Website penjualan keripik Condro"",
+  "description": "Website penjualan keripik Condro",
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
